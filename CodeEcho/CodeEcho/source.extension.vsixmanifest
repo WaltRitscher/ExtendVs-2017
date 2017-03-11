@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
+  <Metadata>
+    <Identity Id="CodeEcho.Walt Ritscher.ccade968-6c06-4b51-beb7-f21a92772f23" Version="1.0" Language="en-US" Publisher="Walt Ritscher" />
+    <DisplayName>CodeEcho</DisplayName>
+    <Description xml:space="preserve">Code Echo, a demo extension for the Lynda.com Visual Studio 2015 Essential Training course</Description>
+    <MoreInfo>http://www.lynda.com/waltritscher</MoreInfo>
+    <License>CodeEchoLicense.rtf</License>
+    <Icon>CodeEchoIcon.png</Icon>
+    <PreviewImage>CodeEchoPreview.png</PreviewImage>
+    <Tags>Code Stats EssentialTraining Example</Tags>
+  </Metadata>
+  <Installation>
+    <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[14.0]" />
+  </Installation>
+  <Dependencies>
+    <Dependency Id="Microsoft.Framework.NDP" DisplayName="Microsoft .NET Framework" d:Source="Manual" Version="[4.5,)" />
+  </Dependencies>
+  <Assets>
+    <Asset Type="Microsoft.VisualStudio.MefComponent" d:Source="Project" d:ProjectName="%CurrentProject%" Path="|%CurrentProject%|" />
+  </Assets>
+</PackageManifest>

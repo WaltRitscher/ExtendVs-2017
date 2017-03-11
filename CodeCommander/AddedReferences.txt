@@ -1,0 +1,13 @@
+﻿Add these references to the CodeCommander project
+
+Microsoft.VisualStudio.Text.UI
+Microsoft.VisualStudio.Text.Data
+Microsoft.VisualStudio.Logic
+Microsoft.VisualStudio.Text.UI.WPF
+Microsoft.VisualStudio.Editor
+Microsoft.VisualStudio.CoreUtility
+
+
+// WPF
+PresentationCore
+PresentationFramework
