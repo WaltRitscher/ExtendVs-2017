@@ -13,10 +13,10 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace $rootnamespace$.Pages {
-  // Created on $time$
-  public partial class $safeitemname$ : Page {
-    public $safeitemname$() {
+namespace CreateCustomItemTemplate.Pages {
+  // Created at time
+  public partial class TourPage : Page {
+    public TourPage() {
 
 			InitializeComponent();
 }
