@@ -34,6 +34,12 @@
   </PropertyGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="ExtensionDocs\BasicLicense.rtf" />
+    <None Include="ExtensionDocs\CodeEchoLicense.rtf" />
+    <None Include="Templates\Item-AboutPageMVC.zip" />
+    <None Include="Templates\Item-RocketController.zip" />
+    <None Include="Templates\Project-MvcStarter.zip" />
+    <None Include="Templates\Project-UwpStarter.zip" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Images\CodeEchoIcon.png" />
@@ -47,6 +53,7 @@
     <Content Include="Images\TemplateScreenShotCloud.jpg" />
     <Content Include="Images\TemplateScreenShotGears.jpg" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
