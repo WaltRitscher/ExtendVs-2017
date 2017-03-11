@@ -40,6 +40,11 @@
     <None Include="Templates\Item-RocketController.zip" />
     <None Include="Templates\Project-MvcStarter.zip" />
     <None Include="Templates\Project-UwpStarter.zip" />
+    <None Include="Vsix\Add New File v3.1.88.vsix" />
+    <None Include="Vsix\Comment Remover v1.2.16.vsix" />
+    <None Include="Vsix\IndentGuide v14.vsix" />
+    <None Include="Vsix\Open Command Line v2.0.168.vsix" />
+    <None Include="Vsix\SpellChecker.vsix" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Exes\EnvironmentVariablesInspector.exe" />
