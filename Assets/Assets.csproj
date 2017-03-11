@@ -42,6 +42,7 @@
     <None Include="Templates\Project-UwpStarter.zip" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Exes\EnvironmentVariablesInspector.exe" />
     <Content Include="Images\CodeEchoIcon.png" />
     <Content Include="Images\ItemTemplate-About.png" />
     <Content Include="Images\ItemTemplate-Book.png" />
