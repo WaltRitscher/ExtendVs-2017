@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UseExternalTool", "ExternalTools\UseExternalTool.csproj", "{E82AE8C2-D4B1-4CD5-8503-6F9F7222AF5E}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assets", "Assets\Assets.csproj", "{3F67AED7-9CF2-4BB1-A833-5B0765B06554}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreateItemTemplate", "ItemTemplate\CreateItemTemplate.csproj", "{2FFDEAB1-3234-46BA-B477-A8F844CE010A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,14 +13,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{E82AE8C2-D4B1-4CD5-8503-6F9F7222AF5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E82AE8C2-D4B1-4CD5-8503-6F9F7222AF5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E82AE8C2-D4B1-4CD5-8503-6F9F7222AF5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E82AE8C2-D4B1-4CD5-8503-6F9F7222AF5E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{3F67AED7-9CF2-4BB1-A833-5B0765B06554}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{3F67AED7-9CF2-4BB1-A833-5B0765B06554}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3F67AED7-9CF2-4BB1-A833-5B0765B06554}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3F67AED7-9CF2-4BB1-A833-5B0765B06554}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2FFDEAB1-3234-46BA-B477-A8F844CE010A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2FFDEAB1-3234-46BA-B477-A8F844CE010A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2FFDEAB1-3234-46BA-B477-A8F844CE010A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2FFDEAB1-3234-46BA-B477-A8F844CE010A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
