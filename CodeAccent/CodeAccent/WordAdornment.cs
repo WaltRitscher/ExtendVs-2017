@@ -54,14 +54,7 @@ namespace CodeAccent
             this.view = view;
             this.view.LayoutChanged += this.OnLayoutChanged;
 
-            // Create the pen and brush to color the box behind the a's
-            this.brush = new SolidColorBrush(Colors.LightGoldenrodYellow);
-            this.brush.Freeze();
-
-            var penBrush = new SolidColorBrush(Colors.Yellow);
-            penBrush.Freeze();
-            this.pen = new Pen(penBrush, 0.5);
-            this.pen.Freeze();
+          
         }
 
         /// <summary>
@@ -89,33 +82,57 @@ namespace CodeAccent
         {
             IWpfTextViewLineCollection textViewLines = this.view.TextViewLines;
 
-            // Loop through each character, and place a box around any 'a'
+            // Loop through each character, and place a box around a charactor
             for (int charIndex = line.Start; charIndex < line.End; charIndex++)
             {
-                if (this.view.TextSnapshot[charIndex] == 'a')
-                {
-                    SnapshotSpan span = new SnapshotSpan(this.view.TextSnapshot, Span.FromBounds(charIndex, charIndex + 1));
-                    Geometry geometry = textViewLines.GetMarkerGeometry(span);
-                    if (geometry != null)
-                    {
-                        var drawing = new GeometryDrawing(this.brush, this.pen, geometry);
-                        drawing.Freeze();
+                if (this.view.TextSnapshot[charIndex] == '<')
+                {  // Create the pen and brush to color the box behind the char
+                    var brush = new SolidColorBrush(Colors.LightGoldenrodYellow);
+                    
 
-                        var drawingImage = new DrawingImage(drawing);
-                        drawingImage.Freeze();
-
-                        var image = new Image
-                        {
-                            Source = drawingImage,
-                        };
-
-                        // Align the image with the top of the bounds of the text geometry
-                        Canvas.SetLeft(image, geometry.Bounds.Left);
-                        Canvas.SetTop(image, geometry.Bounds.Top);
-
-                        this.layer.AddAdornment(AdornmentPositioningBehavior.TextRelative, span, null, image, null);
-                    }
+                    var penBrush = new SolidColorBrush(Colors.Yellow);
+                   
+                    var pen = new Pen(penBrush, 0.5);
+                    
+                    DrawBox(textViewLines, charIndex, brush, pen);
                 }
+                if (this.view.TextSnapshot[charIndex] == '"')
+                {
+                    // Create the pen and brush to color the box behind the char
+                    var brush = new SolidColorBrush(Colors.LightGreen);
+                   
+
+                    var penBrush = new SolidColorBrush(Colors.Green);
+                   
+                    var pen = new Pen(penBrush, 0.5);
+                   
+                    DrawBox(textViewLines, charIndex,  brush,  pen);
+                }
+            }
+        }
+
+        private void DrawBox(IWpfTextViewLineCollection textViewLines, int charIndex, Brush brush, Pen pen)
+        {
+            SnapshotSpan span = new SnapshotSpan(this.view.TextSnapshot, Span.FromBounds(charIndex, charIndex + 1));
+            Geometry geometry = textViewLines.GetMarkerGeometry(span);
+            if (geometry != null)
+            {
+                var drawing = new GeometryDrawing(brush, pen, geometry);
+                drawing.Freeze();
+
+                var drawingImage = new DrawingImage(drawing);
+                drawingImage.Freeze();
+
+                var image = new Image
+                {
+                    Source = drawingImage,
+                };
+
+                // Align the image with the top of the bounds of the text geometry
+                Canvas.SetLeft(image, geometry.Bounds.Left);
+                Canvas.SetTop(image, geometry.Bounds.Top);
+
+                this.layer.AddAdornment(AdornmentPositioningBehavior.TextRelative, span, null, image, null);
             }
         }
     }
