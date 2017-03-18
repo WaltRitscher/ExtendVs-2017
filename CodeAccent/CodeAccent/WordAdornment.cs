@@ -4,12 +4,12 @@
 // </copyright>
 //------------------------------------------------------------------------------
 
-using System;
-using System.Windows.Controls;
-using System.Windows.Media;
 using Microsoft.VisualStudio.Text;
 using Microsoft.VisualStudio.Text.Editor;
 using Microsoft.VisualStudio.Text.Formatting;
+using System;
+using System.Windows.Controls;
+using System.Windows.Media;
 
 namespace CodeAccent
 {
@@ -53,8 +53,6 @@ namespace CodeAccent
 
             this.view = view;
             this.view.LayoutChanged += this.OnLayoutChanged;
-
-          
         }
 
         /// <summary>
@@ -82,31 +80,24 @@ namespace CodeAccent
         {
             IWpfTextViewLineCollection textViewLines = this.view.TextViewLines;
 
-            // Loop through each character, and place a box around a charactor
+            // Loop through each character, and place a box around a character
             for (int charIndex = line.Start; charIndex < line.End; charIndex++)
             {
                 if (this.view.TextSnapshot[charIndex] == '<')
                 {  // Create the pen and brush to color the box behind the char
                     var brush = new SolidColorBrush(Colors.LightGoldenrodYellow);
-                    
-
                     var penBrush = new SolidColorBrush(Colors.Yellow);
-                   
                     var pen = new Pen(penBrush, 0.5);
-                    
+
                     DrawBox(textViewLines, charIndex, brush, pen);
                 }
                 if (this.view.TextSnapshot[charIndex] == '"')
                 {
-                    // Create the pen and brush to color the box behind the char
                     var brush = new SolidColorBrush(Colors.LightGreen);
-                   
-
                     var penBrush = new SolidColorBrush(Colors.Green);
-                   
                     var pen = new Pen(penBrush, 0.5);
-                   
-                    DrawBox(textViewLines, charIndex,  brush,  pen);
+
+                    DrawBox(textViewLines, charIndex, brush, pen);
                 }
             }
         }
