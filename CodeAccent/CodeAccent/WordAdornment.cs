@@ -14,7 +14,7 @@ using System.Windows.Media;
 namespace CodeAccent
 {
     /// <summary>
-    /// WordAdornment places yellow boxes behind all the "a"s in the editor window
+    /// WordAdornment places colored boxes behind certain characters in the editor window
     /// </summary>
     internal sealed class WordAdornment
     {
@@ -73,7 +73,7 @@ namespace CodeAccent
         }
 
         /// <summary>
-        /// Adds the highlight box behind the 'a' characters within the given line
+        /// Adds the highlight box behind the certain characters within the given line
         /// </summary>
         /// <param name="line">Line to add the adornments</param>
         private void CreateVisuals(ITextViewLine line)
