@@ -71,7 +71,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\TourPage.xaml">
+    <Page Include="Pages\Tour Page.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -80,8 +80,8 @@
     <Compile Include="Pages\TemplateFinished.xaml.cs">
       <DependentUpon>TemplateFinished.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\TourPage.xaml.cs">
-      <DependentUpon>TourPage.xaml</DependentUpon>
+    <Compile Include="Pages\Tour Page.xaml.cs">
+      <DependentUpon>Tour Page.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
