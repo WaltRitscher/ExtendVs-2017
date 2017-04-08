@@ -63,6 +63,7 @@ namespace CodeEcho
             int whiteSpaceCounter = 0;
             int commentCounter = 0;
             int varCounter = 0;
+            int wordCounter = 0;
 
             _statsPage.ProgrammingLanguage = DetectLanguage(view).ToString();
             if (string.IsNullOrEmpty(_statsPage.ProgrammingLanguage))
@@ -82,6 +83,10 @@ namespace CodeEcho
                     {
                         whiteSpaceCounter++;
                     }
+                    if (line.Contains("and"))
+                    {
+                        wordCounter++;
+                    } 
                     // assumes that we are working with C# or VB
                     if (line.TrimStart().StartsWith("//") || line.TrimStart().StartsWith("'"))
                     {
