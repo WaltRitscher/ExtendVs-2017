@@ -33,6 +33,7 @@
                     <RowDefinition Height="auto" />
                     <RowDefinition Height="auto" />
                     <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
                 </Grid.RowDefinitions>
                 <TextBlock
                     Grid.Row="0"
@@ -66,6 +67,12 @@
                     FontFamily="Consolas"
                     Text="var Lines:" />
                 <TextBlock
+                    x:Name="WordLabel"
+                    Grid.Row="6"
+                    Grid.Column="1"
+                    FontFamily="Consolas"
+                    Text="Word Lines:" />
+                <TextBlock
                     Grid.Row="1"
                     Grid.Column="1"
                     FontFamily="Consolas"
@@ -94,6 +101,12 @@
                 <TextBlock
                     Name="VarTextBlock"
                     Grid.Row="5"
+                    Grid.Column="2"
+                    Foreground="Black"
+                    Text="0" />
+                <TextBlock
+                    Name="WordTextBlock"
+                    Grid.Row="6"
                     Grid.Column="2"
                     Foreground="Black"
                     Text="0" />

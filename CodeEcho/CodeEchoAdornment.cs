@@ -83,7 +83,7 @@ namespace CodeEcho
                     {
                         whiteSpaceCounter++;
                     }
-                    if (line.Contains("and"))
+                    if (line.Contains(" and"))
                     {
                         wordCounter++;
                     } 
@@ -107,6 +107,7 @@ namespace CodeEcho
             _statsPage.TotalLines = totalCounter;
             _statsPage.WhiteSpaceLines = whiteSpaceCounter;
             _statsPage.VarLines = varCounter;
+            _statsPage.WordLines = wordCounter;
         }
 
         internal Language DetectLanguage(IWpfTextView view)
