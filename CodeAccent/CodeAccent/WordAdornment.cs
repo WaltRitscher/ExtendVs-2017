@@ -83,9 +83,10 @@ namespace CodeAccent
             // Loop through each character, and place a box around a character
             for (int charIndex = line.Start; charIndex < line.End; charIndex++)
             {
-                if (this.view.TextSnapshot[charIndex] == '<')
+                if (this.view.TextSnapshot[charIndex] == '<' || 
+                    this.view.TextSnapshot[charIndex] == '>')
                 {  // Create the pen and brush to color the box behind the char
-                    var brush = new SolidColorBrush(Colors.LightGoldenrodYellow);
+                    var brush = new SolidColorBrush(Colors.DarkOrange);
                     var penBrush = new SolidColorBrush(Colors.Yellow);
                     var pen = new Pen(penBrush, 0.5);
 
@@ -93,7 +94,7 @@ namespace CodeAccent
                 }
                 if (this.view.TextSnapshot[charIndex] == '"')
                 {
-                    var brush = new SolidColorBrush(Colors.LightGreen);
+                    var brush = new SolidColorBrush(Colors.DarkGreen);
                     var penBrush = new SolidColorBrush(Colors.Green);
                     var pen = new Pen(penBrush, 0.5);
 
