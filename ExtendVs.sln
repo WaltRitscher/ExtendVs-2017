@@ -7,7 +7,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assets", "Assets\Assets.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreateItemTemplate", "ItemTemplate\CreateItemTemplate.csproj", "{2FFDEAB1-3234-46BA-B477-A8F844CE010A}"
 EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "DemoAssets", "DemoAssets\DemoAssets.shproj", "{8DA45A58-54F7-46E5-B8E5-217876118D08}"
+EndProject
 Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		DemoAssets\DemoAssets.projitems*{8da45a58-54f7-46e5-b8e5-217876118d08}*SharedItemsImports = 13
+	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
