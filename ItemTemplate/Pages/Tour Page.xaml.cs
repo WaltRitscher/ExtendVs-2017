@@ -13,12 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace CreateCustomItemTemplate.Pages {
-  // Created at time
-  public partial class TourPage : Page {
-    public TourPage() {
+namespace CourseWare.Pages
+{
+    
+    public partial class TourPage : Page
+    {
+        public TourPage()
+        {
 
-			InitializeComponent();
+            // InitializeComponent();
+        }
+    }
 }
-  }
-}
+

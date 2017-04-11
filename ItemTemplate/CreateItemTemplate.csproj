@@ -67,19 +67,12 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Pages\TemplateFinished.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Pages\Tour Page.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Pages\TemplateFinished.xaml.cs">
-      <DependentUpon>TemplateFinished.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Pages\Tour Page.xaml.cs">
       <DependentUpon>Tour Page.xaml</DependentUpon>
     </Compile>

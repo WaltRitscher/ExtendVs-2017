@@ -36,4 +36,15 @@
     <None Include="$(MSBuildThisFileDirectory)Vsix\Open Command Line v2.0.168.vsix" />
     <None Include="$(MSBuildThisFileDirectory)Vsix\SpellChecker.vsix" />
   </ItemGroup>
+  <ItemGroup>
+    <Page Include="$(MSBuildThisFileDirectory)Templates\TemplateFinished.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Templates\TemplateFinished.xaml.cs">
+      <DependentUpon>TemplateFinished.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
 </Project>
