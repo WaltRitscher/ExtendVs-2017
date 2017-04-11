@@ -3,7 +3,8 @@
   <Metadata>
     <Identity Id="CodeAccent.Walt Ritscher.2d7e5710-90ad-49ff-a32a-9308523eceda" Version="1.0" Language="en-US" Publisher="Walt Ritscher" />
     <DisplayName>CodeAccent</DisplayName>
-    <Description>Empty VSIX Project.</Description>
+    <Description xml:space="preserve">CodeAccent Extension, created for the LinkedIn/Lynda course
+Coo</Description>
   </Metadata>
   <Installation>
     <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[14.0]" />

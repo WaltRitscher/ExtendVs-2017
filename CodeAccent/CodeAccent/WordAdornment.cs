@@ -52,6 +52,9 @@ namespace CodeAccent
             this.layer = view.GetAdornmentLayer("WordAdornment");
 
             this.view = view;
+
+            // LayoutChanged event is raised whenever the rendered text 
+            // displayed in the changes.
             this.view.LayoutChanged += this.OnLayoutChanged;
         }
 
@@ -83,7 +86,7 @@ namespace CodeAccent
             // Loop through each character, and place a box around a character
             for (int charIndex = line.Start; charIndex < line.End; charIndex++)
             {
-                if (this.view.TextSnapshot[charIndex] == '<' || 
+                if (this.view.TextSnapshot[charIndex] == '<' ||
                     this.view.TextSnapshot[charIndex] == '>')
                 {  // Create the pen and brush to color the box behind the char
                     var brush = new SolidColorBrush(Colors.DarkOrange);
@@ -103,28 +106,38 @@ namespace CodeAccent
             }
         }
 
-        private void DrawBox(IWpfTextViewLineCollection textViewLines, int charIndex, Brush brush, Pen pen)
+        private void DrawBox(IWpfTextViewLineCollection textViewLines, int charIndex,
+                                Brush brush, Pen pen)
         {
-            SnapshotSpan span = new SnapshotSpan(this.view.TextSnapshot, Span.FromBounds(charIndex, charIndex + 1));
+            var span = new SnapshotSpan(this.view.TextSnapshot, Span.FromBounds(charIndex, charIndex + 1));
             Geometry geometry = textViewLines.GetMarkerGeometry(span);
             if (geometry != null)
             {
-                var drawing = new GeometryDrawing(brush, pen, geometry);
-                drawing.Freeze();
+                var geoDrawing = new GeometryDrawing(brush: brush,
+                                                  pen: pen,
+                                                  geometry: geometry);
+                geoDrawing.Freeze();
 
-                var drawingImage = new DrawingImage(drawing);
+                var drawingImage = new DrawingImage(drawing: geoDrawing);
                 drawingImage.Freeze();
 
-                var image = new Image
+                var adornmentImage = new Image
                 {
                     Source = drawingImage,
                 };
 
                 // Align the image with the top of the bounds of the text geometry
-                Canvas.SetLeft(image, geometry.Bounds.Left);
-                Canvas.SetTop(image, geometry.Bounds.Top);
+                Canvas.SetLeft(element: adornmentImage,
+                               length: geometry.Bounds.Left);   
+                Canvas.SetTop(element: adornmentImage,
+                              length: geometry.Bounds.Top);
 
-                this.layer.AddAdornment(AdornmentPositioningBehavior.TextRelative, span, null, image, null);
+                this.layer.AddAdornment(behavior: AdornmentPositioningBehavior.TextRelative,
+                                        visualSpan: span,
+                                        tag: null,
+                                        adornment: adornmentImage,
+                                        removedCallback: null);
+
             }
         }
     }
