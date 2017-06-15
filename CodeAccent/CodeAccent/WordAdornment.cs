@@ -54,7 +54,7 @@ namespace CodeAccent
             this.view = view;
 
             // LayoutChanged event is raised whenever the rendered text 
-            // displayed in the changes.
+            // displayed in Editor changes.
             this.view.LayoutChanged += this.OnLayoutChanged;
         }
 
